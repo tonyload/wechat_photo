@@ -11,7 +11,7 @@
     <view class="item" wx:for="{{pics}}" wx:key="_id">
       <view class="time">{{item[0].created}}</view>
       <view class="pics">
-        <image class="pic" bindtap="previewImage" wx:for="{{item}}" wx:for-item="item2" data-src="{{item2.url}}" src="{{item2.url}}"></image>
+        <image class="pic" bindtap="previewImage" wx:for="{{item}}"  wx:key="_id" wx:for-item="item2" data-src="{{item2.url}}" src="{{item2.url}}"></image>
       </view>
     </view>
   </view>

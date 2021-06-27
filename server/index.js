@@ -57,7 +57,7 @@ const SERVER = {
     return HTTP(SERVER_API.PHOTO, opt, 'uploadFile')
   },
   getPic(id) {
-    return HTTP(`${SERVER_API.ALBUM}/${id}`)
+    return HTTP(`/xcx${SERVER_API.ALBUM}/${id}`)
   },
   scanCode(code) {
     return HTTP(`/login/ercode/${code}`)

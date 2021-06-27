@@ -22,6 +22,7 @@ Page({
   getPic() {
 
     SERVER.getPic(this.data.id).then(res => {
+      console.log(res.data)
       if (res.data.status == 0) {
         const { count, data } = res.data.data
         let pics = count ?this.reSort(data):[]
@@ -81,9 +82,7 @@ Page({
     })
   },
   previewImage(e) {
-
     let current = e.target.dataset.src
-
     wx.previewImage({
       current: current,
       urls: [current]
